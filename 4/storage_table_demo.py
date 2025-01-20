@@ -47,7 +47,7 @@ else:
 # Use the Azure Storage Storage SDK for Python to create a Table
 ###
 print('\nLet\'s create an Azure Storage Table to store some data.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 # Each storage account has a primary and secondary access key.
 # These keys are used by aplications to access data in your storage account, such as Tables.
@@ -72,7 +72,7 @@ time.sleep(1)
 # Use the Azure Storage Storage SDK for Python to create some entries in the Table
 ###
 print('Now let\'s add some entries to our Table.\nRemember, Azure Storage Tables is a NoSQL datastore, so this is similar to adding records to a database.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 # Each entry in a Table is called an 'entity'. 
 # Here, we add an entry for first pizza with two pieces of data - the name, and the cost
@@ -112,7 +112,7 @@ time.sleep(1)
 # Use the Azure Storage Storage SDK for Python to query for entities in our Table
 ###
 print('With some data in our Azure Storage Table, we can query the data.\nLet\'s see what the pizza menu looks like.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 # In this query, you define the partition key to search within, and then which properties to retrieve
 # Structuring queries like this improves performance as your application scales up and keeps the queries efficient
@@ -129,7 +129,7 @@ time.sleep(1)
 # Although the actual cost is minimal (fractions of a cent per month) for the three entities we created, it's good to clean up resources when you're done
 ###
 print('\nThis is a basic example of how Azure Storage Tables behave like a database.\nTo keep things tidy, let\'s clean up the Azure Storage resources we created.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 response = table_service.delete_table('pizzatable')
 if response == True:
